@@ -23,7 +23,7 @@ object SundialBuild extends Build {
     .enablePlugins(PlayScala)
     .settings(
       version := "0.0.7",
-      scalaVersion := "2.11.8",  // 2.11.7 triggers weird issue with parsing routes file (https://gitter.im/playframework/playframework/archives/2015/07/06)
+      scalaVersion := "2.11.8",
       unmanagedResourceDirectories in Test <+=  baseDirectory (_ /"target/web/public/test"),
       libraryDependencies ++= dependencies,
       routesImport += "com.gilt.svc.sundial.v0.Bindables._",
